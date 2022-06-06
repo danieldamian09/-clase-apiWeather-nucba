@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Clima</title>
+  <link rel="stylesheet" href="./src/styles/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main class="container">
+
+    <!-- Logo -->
+    <header class="logo">
+      <img class="logo__search" src="./public/img/search-icono.png" alt="buscar" width="30" height="30">
+    </header>
+
+    <!-- Formulario Busqueda -->
+    <section class="form">
+      <div class="search__container">
+        <img class="search__close" src="./public/img/close.png" alt="cerrar" width="20" height="20">
+        <form class="search__form">
+          <div class="search__city">
+            <input class="search__input" type="text" name="ciudad" id="ciudad" placeholder="Buscar Ciudad">
+          </div>
+          <div class="search__country">
+            <select name="pais" id="pais">
+              <option value="">Seleccione un País</option>
+              <option value="AR">Argentina</option>
+              <option value="CO">Colombia</option>
+              <option value="CR">Costa Rica</option>
+              <option value="US">Estados Unidos</option>
+              <option value="ES">España</option>
+              <option value="PE">Perú</option>
+              <option value="MX">México</option>
+              <option value="VE">Venezuela</option>
+            </select>
+          </div>
+          <input class="search__send" type="submit" value="Consultar Clima">
+        </form>
+      </div>
+    </section>
+
+    <!-- Resultado Api -->
+    <section class="results">
+      <div class="results__country">
+        <p class="results__date">Today, May 7th, 2021</p>
+        <h1 class="results__city">Barcelona</h1>
+      </div>
+
+      <div class="results__climate">
+        <img src="./public/img/despejado.svg" alt="" class="results__icono" width="75" height="75">
+        <p class="results__temperature">10°C</p>
+      </div>
+      <div class="results__details">
+        <div>
+          <p class="results__details-title">temp_min</p>
+          <p class="results__details-value">30%</p>
+        </div>
+        <div>
+          <p class="results__details-title">temp_max</p>
+          <p class="results__details-value">10km/h</p>
+        </div>
+        <div>
+          <p class="results__details-title">humidity</p>
+          <p class="results__details-value">6:20 am</p>
+        </div>
+        <div>
+          <p class="results__details-title">feels_like</p>
+          <p class="results__details-value">6:20 pm</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Desarrolladdo -->
+  <footer class="footer">
+
+
+  </footer>
+
+  <script src="./src/app.js"></script>
+</body>
+
+</html>
