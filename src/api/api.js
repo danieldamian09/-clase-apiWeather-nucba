@@ -1,3 +1,4 @@
+import { errorMessage } from '../components/error.js';
 import { datos } from '../data/datos.js';
 
 
@@ -12,6 +13,6 @@ export const api =  async(city= "Buenos Airea", country = "AR") => {
     datos(name, main);
 
   } catch (error) {
-    console.log(error);
+    errorMessage('No se pudo obtener la información');
   }
 }
