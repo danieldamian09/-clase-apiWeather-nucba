@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>App Clima</title>
+  <link rel="shortcut icon" href="./public/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./src/styles/spinner.css">
   <link rel="stylesheet" href="./src/styles/index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,12 +26,18 @@
     <section class="form">
       <div class="search__container">
         <img class="search__close" src="./public/img/close.png" alt="cerrar" width="20" height="20">
+        <!-- Messaje error -->
+        <div class="search__message">
+          <p class="search__message--error">
+              Debes ingresar una ciudad y país
+          </p>
+        </div>
         <form class="search__form">
           <div class="search__city">
-            <input class="search__input" type="text" name="ciudad" id="ciudad" placeholder="Buscar Ciudad">
+            <input class="search__input" type="text" name="city" id="city" placeholder="Buscar Ciudad">
           </div>
           <div class="search__country">
-            <select name="pais" id="pais">
+            <select name="country" id="country" >
               <option value="">Seleccione un País</option>
               <option value="AR">Argentina</option>
               <option value="CO">Colombia</option>
@@ -49,42 +57,40 @@
     <!-- Resultado Api -->
     <section class="results">
       <div class="results__country">
-        <p class="results__date">Today, May 7th, 2021</p>
-        <h1 class="results__city">Barcelona</h1>
+        <p class="results__date"></p>
+        <h1 class="results__city"></h1>
       </div>
 
       <div class="results__climate">
         <img src="./public/img/despejado.svg" alt="" class="results__icono" width="75" height="75">
-        <p class="results__temperature">10°C</p>
+        <p class="results__temperature"><span id="current"></span><span>&#x2103;</span></p>
       </div>
       <div class="results__details">
         <div>
-          <p class="results__details-title">temp_min</p>
-          <p class="results__details-value">30%</p>
+          <p class="results__title">Temperatura Mín</p>
+          <p class="results__value"> <span id="min"></span><span>&#x2103;</span></p>
         </div>
         <div>
-          <p class="results__details-title">temp_max</p>
-          <p class="results__details-value">10km/h</p>
+          <p class="results__title">Temperatura Máx</p>
+          <p class="results__value"><span id="max"></span><span>&#x2103;</span></p>
         </div>
         <div>
-          <p class="results__details-title">humidity</p>
-          <p class="results__details-value">6:20 am</p>
+          <p class="results__title">Humedad</p>
+          <p class="results__value"><span id="humidity"></span> %</p>
         </div>
         <div>
-          <p class="results__details-title">feels_like</p>
-          <p class="results__details-value">6:20 pm</p>
+          <p class="results__title">Senasción Térmica</p>
+          <p class="results__value"><span id="feels"></span><span>&#x2103;</span></p>
         </div>
       </div>
     </section>
+    <!-- Desarrolladdo -->
+    <footer class="footer">
+      <p>Desarrollado por @Humberto Rivero</p>
+    </footer>
   </main>
 
-  <!-- Desarrolladdo -->
-  <footer class="footer">
-
-
-  </footer>
-
-  <script src="./src/app.js"></script>
+  <script src="./src/app.js" type="module" ></script>
 </body>
 
 </html>

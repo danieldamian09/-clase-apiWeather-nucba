@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -10,7 +10,8 @@ body {
 }
 
 .container {
-	background: linear-gradient(180deg, #30A2C5 0%, rgba(255, 255, 255, 0) 100%), #00242F;
+	background: linear-gradient(180deg, #30a2c5 0%, rgba(255, 255, 255, 0) 100%),
+		#00242f;
 	height: 100vh;
 	margin: 0 auto;
 	max-width: 400px;
@@ -29,9 +30,8 @@ body {
 		-moz-border-radius: 40px;
 		-ms-border-radius: 40px;
 		-o-border-radius: 40px;
+	}
 }
-}
-
 
 .logo {
 	position: absolute;
@@ -56,8 +56,16 @@ body {
 	-o-border-radius: 20px;
 }
 
+@media (min-width: 268px) {
+	.form {
+		top: 24%;
+	}
+}
+
+
 .search__container {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 20px;
@@ -69,8 +77,21 @@ body {
 	right: 20px;
 }
 
+
+.search__message{
+	display: none;
+}
+
+.search__message--error{
+	width: 100%;
+	color: #fff;
+	font-size: 12px;
+	background-color: #ff0000;
+	padding: 10px;
+}
+
 .search__form {
-	margin-top: 40px;
+	margin-top: 20px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -120,18 +141,24 @@ body {
 	margin-top: 10px;
 }
 
-.results{
+.results {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin-top: 30%;
+	margin: 10% auto 0;
 }
 
-.results__climate{
-	width: 250px;
-	height: 250px;
+@media (min-width: 768px) {
+	.results {
+		margin-top: 20%;
+	}
+}
+
+.results__climate {
+	width: 200px;
+	height: 200px;
 	border-radius: 50%;
 	display: flex;
 	flex-direction: column;
@@ -141,19 +168,26 @@ body {
 	box-shadow: 0px 28px 36px rgba(96, 209, 234, 0.4);
 }
 
+@media (min-width: 768px) {
+	.results__climate {
+		width: 250px;
+		height: 250px;
+	}
+}
 
-.results__country{
+
+.results__country {
 	margin: 20px auto;
 }
 
-.results__date{
+.results__date {
 	font-size: 14px;
 	line-height: 17px;
 	text-align: center;
 	color: #fff;
 }
 
-.results__city{
+.results__city {
 	font-size: 40px;
 	line-height: 48px;
 	text-align: center;
@@ -161,11 +195,11 @@ body {
 	color: #fff;
 }
 
-.results__climate{
+.results__climate {
 	padding: 20px;
 }
 
-.results__temperature{
+.results__temperature {
 	font-size: 72px;
 	line-height: 80px;
 	text-align: center;
@@ -173,9 +207,51 @@ body {
 	color: #000;
 }
 
-.results__details{
-	margin-top: 45px;
+.results__details {
+	margin-top: 15px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 1rem;
+	gap: 2rem;
+}
+
+@media (min-width: 768px) {
+	.results__details {
+		margin-top: 50px;
+	}
+}
+
+.results__title,
+.results__value {
+	font-size: 14px;
+	line-height: 17px;
+	text-align: center;
+	color: #fff;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	padding: 20px;
+	border-top: solid 1px #00242f7a;
+	-webkit-border-top: solid 1px #00242f7a;
+	-moz-border-top: solid 1px #00242f7a;
+	-ms-border-top: solid 1px #00242f7a;
+	-o-border-top: solid 1px #00242f7a;
+	border-radius: 20px 20px 0px 0px;
+	-webkit-border-radius: 20px 20px 0px 0px;
+	-moz-border-radius: 20px 20px 0px 0px;
+	-ms-border-radius: 20px 20px 0px 0px;
+	-o-border-radius: 20px 20px 0px 0px;
+}
+
+@media (min-width: 268px) {
+	.footer {
+		font-size: 12px;
+	}
 }
