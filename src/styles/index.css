@@ -12,7 +12,7 @@ body {
 .container {
 	background: linear-gradient(180deg, #30a2c5 0%, rgba(255, 255, 255, 0) 100%),
 		#00242f;
-	height: calc(100vh - 50px);
+	height: 100vh;
 	margin: 0 auto;
 	max-width: 400px;
 	width: 100%;
@@ -30,7 +30,6 @@ body {
 		-moz-border-radius: 40px;
 		-ms-border-radius: 40px;
 		-o-border-radius: 40px;
-		height: 100vh;
 	}
 }
 
