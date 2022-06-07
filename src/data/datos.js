@@ -14,7 +14,6 @@ const kelvin = 273.15;
 
 
 export const datos = (name, main) => {
-  console.log(name, main);
   city.textContent = `${name}`;
   temperature.textContent = `${parseInt(main.temp - kelvin)}`;
   date.textContent = formatearFecha(fechaFormarto);

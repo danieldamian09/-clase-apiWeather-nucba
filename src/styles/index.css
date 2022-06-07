@@ -42,7 +42,7 @@ body {
 .form {
 	display: none;
 	position: absolute;
-	top: 21%;
+	top: 22%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 90%;
@@ -56,9 +56,9 @@ body {
 	-o-border-radius: 20px;
 }
 
-@media (min-width: 268px) {
+@media (min-width: 768px) {
 	.form {
-		top: 24%;
+		top: 19%;
 	}
 }
 
