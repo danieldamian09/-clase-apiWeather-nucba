@@ -238,6 +238,7 @@ body {
 .footer {
 	position: absolute;
 	bottom: 0;
+	font-size: 10px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -257,8 +258,8 @@ body {
 	-o-border-radius:20px 20px 0px 0px;
 }
 
-@media (min-width: 268px) {
+@media (min-width: 768px) {
 	.footer {
-		font-size: 10px;
+		font-size: 12px;
 	}
 }
